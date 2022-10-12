@@ -1,0 +1,5 @@
+{
+    "bail": 1,
+    "verbose": true,
+    "moduleFileExtensions": ["js", "mjs", "cjs", "ts", "mts", "json", "node"]
+}

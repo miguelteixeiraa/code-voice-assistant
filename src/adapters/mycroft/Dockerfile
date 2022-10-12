@@ -1,0 +1,1 @@
+FROM mycroftai/docker-mycroft
