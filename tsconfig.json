@@ -10,7 +10,8 @@
         "skipLibCheck": true,
         "esModuleInterop": true,
         "sourceMap": false,
-        "rootDir": "."
+        "rootDir": ".",
+        "moduleResolution": "node"
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules", ".vscode-test"]

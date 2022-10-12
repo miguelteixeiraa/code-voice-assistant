@@ -1,34 +1,36 @@
-import { config } from '../../../config/environment'
 import * as vscode from 'vscode'
 
 interface CommandBaseInt {
     name: string
-    action?: (arg: any) => void
+    action: (...arg: any[]) => void
     register: (context: vscode.ExtensionContext) => void
 }
 
 export class CommandBase implements CommandBaseInt {
     #name: string
+    #extNamespace = `${process.env.EXTENSION_PREFIX}`
 
     constructor(name: string) {
-        if (!name) {
-            throw new Error('Invalid name for a command')
+        if (!name || !this.#extNamespace) {
+            throw new Error(
+                'Cannot create Commands: invalid name or extension namespace'
+            )
         }
-        this.#name = `${config.EXTENSION_PREFIX}.${name}`
+
+        this.#name = `${this.#extNamespace}.${name}`
     }
 
     get name() {
         return this.#name
     }
 
-    action(_generic: unknown) {}
+    get extNamespace() {
+        return this.#extNamespace
+    }
+
+    action(..._arg: any[]) {}
 
     register(context: vscode.ExtensionContext) {
-        if (!this.action) {
-            console.warn('There is no action to register.')
-            return
-        }
-
         const disposable = vscode.commands.registerCommand(
             this.#name,
             this.action
