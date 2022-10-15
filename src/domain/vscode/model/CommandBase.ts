@@ -1,4 +1,5 @@
 import * as vscode from 'vscode'
+import { EXTENSION_PREFIX } from '../../../config/constants'
 
 interface CommandBaseInt {
     name: string
@@ -8,10 +9,10 @@ interface CommandBaseInt {
 
 export class CommandBase implements CommandBaseInt {
     #name: string
-    #extNamespace = `${process.env.EXTENSION_PREFIX}`
+    #extNamespace = EXTENSION_PREFIX
 
     constructor(name: string) {
-        if (!name || !this.#extNamespace) {
+        if (!name) {
             throw new Error(
                 'Cannot create Commands: invalid name or extension namespace'
             )

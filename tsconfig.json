@@ -1,18 +1,16 @@
 {
     "compilerOptions": {
-        "module": "ESNext",
-        "target": "es2021",
+        "module": "commonjs",
+        "target": "es2020",
+        "lib": ["es2020"],
         "outDir": "out",
+        "sourceMap": true,
         "strict": true,
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
+        "rootDir": "src",
         "skipLibCheck": true,
-        "esModuleInterop": true,
-        "sourceMap": false,
-        "rootDir": ".",
-        "moduleResolution": "node"
+        "paths": {
+            "*": ["./node_modules/*"]
+        }
     },
-    "include": ["src/**/*"],
     "exclude": ["node_modules", ".vscode-test"]
 }

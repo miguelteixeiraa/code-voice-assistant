@@ -1,5 +1,8 @@
 {
     "bail": 1,
     "verbose": true,
-    "moduleFileExtensions": ["js", "mjs", "cjs", "ts", "mts", "json", "node"]
+    "moduleFileExtensions": ["js", "mjs", "cjs", "ts", "mts", "json", "node"],
+    "transform": {
+        "^.+\\.(ts|tsx)$": "ts-jest"
+    }
 }
