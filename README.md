@@ -62,6 +62,6 @@ source ./.pvenv/bin/activate
 pip install -r requirements.txt
 ```
 
-## ☕ VSCode development
+## :coffee: VSCode development
 
 ...
