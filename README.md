@@ -2,10 +2,10 @@
 
 ## 💻 Requirements
 
--   pNPM (https://pnpm.io/pt/)[https://pnpm.io/pt/]
--   NodeJs (v16) (https://nodejs.org/en/)[https://nodejs.org/en/]
--   Python (v3.10) (https://www.python.org/downloads/)[https://www.python.org/downloads/]
--   Docker (v20) (https://docs.docker.com/engine/install/)[https://docs.docker.com/engine/install/]
+-   pNPM [https://pnpm.io/pt/](https://pnpm.io/pt/)
+-   NodeJs (v16) [https://nodejs.org/en/](https://nodejs.org/en/)
+-   Python (v3.10) [https://www.python.org/downloads/](https://www.python.org/downloads/)
+-   Docker (v20) [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 
 ## 🚀 Development Setup
 
@@ -45,13 +45,13 @@ install **python** following the instructions at
 https://www.python.org/downloads
 ```
 
-install JavaScript dependencies
+install **JavaScript** dependencies
 
 ```bash
 pnpm i
 ```
 
-install python dependencies
+install **python** dependencies
 
 ```bash
 # create a local virtual python environment
