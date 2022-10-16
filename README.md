@@ -1,4 +1,4 @@
-# Code Voice Assistant>
+# Code Voice Assistant
 
 ## 💻 Requirements
 
