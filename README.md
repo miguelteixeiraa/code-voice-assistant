@@ -12,7 +12,7 @@
 -   Mycroft [https://mycroft-ai.gitbook.io/docs/](https://mycroft-ai.gitbook.io/docs)
 -   VSCode API [https://code.visualstudio.com/api/references/vscode-api](https://code.visualstudio.com/api/references/vscode-api)
 
-# :rocket: Development Setup
+## :rocket: Development Setup
 
 install **docker** following the instructions at
 
