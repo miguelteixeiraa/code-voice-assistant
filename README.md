@@ -1,13 +1,18 @@
 # Code Voice Assistant
 
-## 💻 Requirements
+## :computer: Requirements
 
 -   pNPM [https://pnpm.io/pt/](https://pnpm.io/pt/)
 -   NodeJs (v16) [https://nodejs.org/en/](https://nodejs.org/en/)
 -   Python (v3.10) [https://www.python.org/downloads/](https://www.python.org/downloads/)
 -   Docker (v20) [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 
-## 🚀 Development Setup
+## :art: Development Documentation
+
+-   Mycroft (https://mycroft-ai.gitbook.io/docs/)[https://mycroft-ai.gitbook.io/docs]
+-   VSCode API (https://code.visualstudio.com/api/references/vscode-api)[https://code.visualstudio.com/api/references/vscode-api]
+
+# :rocket: Development Setup
 
 install **docker** following the instructions at
 
