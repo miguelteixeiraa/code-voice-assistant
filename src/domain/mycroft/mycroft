@@ -1,0 +1,87 @@
+#!/bin/bash
+
+MYCROFT_PORT=8181
+
+check_docker(){
+    tput setaf 3 # yellow
+    echo "Checking docker.."
+    
+    tput setaf 7 # white
+    docker --version
+    if [ $? -ne 0 ]
+    then
+        tput setaf 1 # red
+        echo "You need to install docker first. See https://docs.docker.com/engine/install/"
+        
+        tput sgr0 # default
+        exit 1
+    fi
+    
+    return 0
+}
+
+pull_image() {
+    tput setaf 3 # yellow
+    echo "Checking 'mycroft' docker image.."
+    
+    docker image ls | grep mycroft >/dev/null
+    if [ $? -ne 0 ]
+    then
+        tput sgr0 # default
+        
+        docker pull mycroftai/docker-mycroft
+        if [ $? -ne 0 ]
+        then
+            tput setaf 1 # red
+            echo "Unable to pull docker image or mycroft."
+            
+            tput sgr0 #default
+            exit 1
+        fi
+    fi
+}
+
+start_mycroft() {
+    tput setaf 3 # yellow
+    echo "Starting mycroft.."
+    
+    docker container ps | grep mycroft >/dev/null
+    if [ $? -ne 1 ]
+    then
+        tput setaf 1 # red
+        echo "Container 'mycroft' already exists."
+        
+        tput sgr0 #default
+        exit 1
+    fi
+    
+    tput sgr0
+    
+    docker run \
+    -d \
+    -v directory_on_local_machine:/root/.mycroft \
+    --device /dev/snd \
+    -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native \
+    -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native \
+    -v ~/.config/pulse/cookie:/root/.config/pulse/cookie \
+    -p ${MYCROFT_PORT}:8181 \
+    --name mycroft mycroftai/docker-mycroft
+    
+    if [ $? -ne 0 ]
+    then
+        tput setaf 1 # red
+        echo "Unable to start container for mycroft."
+        
+        tput sgr0 #default
+        exit 1
+    fi
+    
+    tput setaf 2 # green
+    echo "Mycroft successfully started and listening on port: ${MYCROFT_PORT}"
+    
+    tput sgr0 #default
+}
+
+check_docker
+pull_image
+start_mycroft

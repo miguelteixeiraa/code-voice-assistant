@@ -1,10 +1,12 @@
 import Fastify from 'fastify'
+import * as vscode from 'vscode'
 
 const fastify = Fastify({
     logger: true,
 })
 
 fastify.get('/', async () => {
+    vscode.commands.executeCommand('extension.helloWorld')
     return { hello: 'world' }
 })
 
