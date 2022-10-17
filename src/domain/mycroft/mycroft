@@ -33,7 +33,7 @@ pull_image() {
         if [ $? -ne 0 ]
         then
             tput setaf 1 # red
-            echo "Unable to pull docker image or mycroft."
+            echo "Unable to pull docker image for mycroft."
             
             tput sgr0 #default
             exit 1
