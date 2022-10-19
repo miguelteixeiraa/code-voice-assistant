@@ -3,10 +3,15 @@
 WORKDIR="$( cd "$( dirname "$0" )" && pwd )"
 cd "${WORKDIR}" && cd .. && cd skills
 
-for skill in *; do
-    if [ -d "$skill" ]; then
+SKILLS_PATH="$( pwd )"
+
+
+for skill in *
+do
+    if [ -d "$skill" ]
+    then
         echo "Loading skill: ${skill} .."
         
-        #docker exec -it mycroft /opt/mycroft/bin/mycroft-msm install
+        cp -r ${SKILLS_PATH}/${skill} ../../../../.mycroft/skills/
     fi
 done
