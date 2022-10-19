@@ -1,9 +1,10 @@
 #!/bin/bash
 
 WORKDIR="$( cd "$( dirname "$0" )" && pwd )"
-cd "${WORKDIR}" && cd .. && cd skills
+cd "${WORKDIR}" && cd ../skills
 
 SKILLS_PATH="$( pwd )"
+TARGET_SKILLS_PATH="$( cd ../../../../.mycroft/skills/ && pwd )"
 
 
 for skill in *
@@ -12,6 +13,8 @@ do
     then
         echo "Loading skill: ${skill} .."
         
-        cp -r ${SKILLS_PATH}/${skill} ../../../../.mycroft/skills/
+        rm -r ${TARGET_SKILLS_PATH}/${skill} >/dev/null
+        
+        cp -r ${SKILLS_PATH}/${skill} ${TARGET_SKILLS_PATH}
     fi
 done

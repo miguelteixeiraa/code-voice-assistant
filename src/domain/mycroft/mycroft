@@ -13,7 +13,7 @@ source ./scripts/setup
 
 echo "Starting mycroft.."
 
-docker container ps | grep mycroft >/dev/null
+docker ps -a | grep mycroft >/dev/null
 if [ $? -ne 1 ]
 then
     echo "Container 'mycroft' already exists. Restarting.."

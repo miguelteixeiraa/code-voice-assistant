@@ -2,6 +2,6 @@ out
 node_modules
 .*env
 __pycache__/
-.mycroft
+.mycroft/skills
 *.qmlc
 settings.json
