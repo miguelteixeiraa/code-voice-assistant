@@ -5,6 +5,9 @@ MYCROFT_PORT=8181
 WORKDIR="$( cd "$( dirname "$0" )" && pwd )"
 cd "${WORKDIR}"
 
+MYCROFT_CONFIG_DIR="$( cd .. && cd .. && cd .. && pwd )"
+
+
 source ./scripts/setup
 
 
@@ -19,9 +22,9 @@ then
     exit 0
 fi
 
-docker run \
--d \
--v .:/root/.mycroft \
+docker run -d \
+-v ${MYCROFT_CONFIG_DIR}/.mycroft/config:/root/.mycroft \
+-v ${MYCROFT_CONFIG_DIR}/.mycroft/skills:/opt/mycroft/skills \
 --device /dev/snd \
 -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native \
 -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native \
