@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Checking 'mycroft' docker image.."
+
+docker image ls | grep mycroft >/dev/null
+if [ $? -ne 0 ]
+then
+    docker pull mycroftai/docker-mycroft
+    if [ $? -ne 0 ]
+    then
+        echo "Unable to pull docker image or mycroft."
+        exit 1
+    fi
+fi
+
+echo "Done!"
