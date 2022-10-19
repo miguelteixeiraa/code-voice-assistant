@@ -5,10 +5,15 @@ const fastify = Fastify({
     logger: true,
 })
 
-fastify.get('/', async () => {
-    vscode.commands.executeCommand('extension.helloWorld')
-    return { hello: 'world' }
-})
+fastify
+    .get('/', async () => {
+        vscode.commands.executeCommand('extension.helloWorld')
+        return { hello: 'world' }
+    })
+    .post('/', async (req, _reply) => {
+        vscode.commands.executeCommand('extension.helloWorld', req.body)
+        return { hello: 'world' }
+    })
 
 export const initialize = (): void => {
     try {

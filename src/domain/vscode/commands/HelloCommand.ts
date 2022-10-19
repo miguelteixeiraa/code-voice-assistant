@@ -6,11 +6,13 @@ export class HelloCommand extends CommandBase {
         super('hello')
     }
 
-    action() {
+    action(something: object) {
         console.log(
             'Congratulations, your extension "helloworld-sample" is now active!'
         )
 
-        vscode.window.showInformationMessage('Hello World!')
+        vscode.window.activeTextEditor?.edit((editor) => {
+            editor.insert(new vscode.Position(0, 0), String(something))
+        })
     }
 }
