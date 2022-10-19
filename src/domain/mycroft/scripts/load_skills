@@ -1,0 +1,12 @@
+#!/bin/bash
+
+WORKDIR="$( cd "$( dirname "$0" )" && pwd )"
+cd "${WORKDIR}" && cd .. && cd skills
+
+for skill in *; do
+    if [ -d "$skill" ]; then
+        echo "Loading skill: ${skill} .."
+        
+        #docker exec -it mycroft /opt/mycroft/bin/mycroft-msm install
+    fi
+done
