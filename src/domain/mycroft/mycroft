@@ -18,8 +18,8 @@ if [ $? -ne 1 ]
 then
     echo "Container 'mycroft' already exists. Restarting.."
     
-    docker restart mycroft
-    exit 0
+    docker stop mycroft
+    docker rm mycroft
 fi
 
 docker run -d \
@@ -30,6 +30,7 @@ docker run -d \
 -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native \
 -v ~/.config/pulse/cookie:/root/.config/pulse/cookie \
 -p ${MYCROFT_PORT}:8181 \
+--network="host" \
 --name mycroft mycroftai/docker-mycroft
 
 if [ $? -ne 0 ]
@@ -38,5 +39,7 @@ then
     
     exit 1
 fi
+
+source ./scripts/load_skills
 
 echo "Mycroft successfully started and listening on port: ${MYCROFT_PORT}"

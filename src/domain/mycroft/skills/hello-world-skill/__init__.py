@@ -10,6 +10,7 @@ class HelloWorld(MycroftSkill):
 
     @intent_handler("world.hello.intent")
     def handle_world_hello(self, message):
+        requests.get("http://0.0.0.0:3000/")
         self.speak_dialog("world.hello")
 
     #
