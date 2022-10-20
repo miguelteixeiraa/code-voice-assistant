@@ -1,5 +1,9 @@
 {
-    "blacklist":[],
+    "blacklist":[
+        "mycroft-pairing",
+        "mycroft-configuration.mycroftai",
+        "mycroft-pairing.mycroftai"
+    ],
     "version":2,
     "skills":[
         {
@@ -7,7 +11,7 @@
             "origin":"",
             "beta":false,
             "status":"active",
-            "installed":1666221601.6811013,
+            "installed":1666220677.123874,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-pairing|21.02"
@@ -17,27 +21,67 @@
             "origin":"",
             "beta":false,
             "status":"active",
-            "installed":1666221603.8788893,
+            "installed":1666220678.7919776,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-volume|21.02"
+        },
+        {
+            "name":"mycroft-reminder",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220684.1351335,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"mycroft-reminder|21.02"
         },
         {
             "name":"mycroft-playback-control",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221610.761079,
+            "installed":1666220684.318664,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-playback-control|21.02"
+        },
+        {
+            "name":"fallback-unknown",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220684.4107676,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"fallback-unknown|21.02"
+        },
+        {
+            "name":"mycroft-speak",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220684.4306772,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"mycroft-speak|21.02"
+        },
+        {
+            "name":"mycroft-naptime",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220684.5737817,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"mycroft-naptime|21.02"
         },
         {
             "name":"mycroft-personal",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221610.7730107,
+            "installed":1666220684.5747545,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-personal|21.02"
@@ -47,107 +91,57 @@
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221612.2941992,
+            "installed":1666220684.5847266,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-hello-world|21.02"
-        },
-        {
-            "name":"mycroft-speak",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221612.3363638,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"mycroft-speak|21.02"
         },
         {
             "name":"mycroft-spelling",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221612.4401965,
+            "installed":1666220684.7121072,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-spelling|21.02"
-        },
-        {
-            "name":"mycroft-naptime",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221612.6140354,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"mycroft-naptime|21.02"
-        },
-        {
-            "name":"fallback-unknown",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221612.7005196,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"fallback-unknown|21.02"
         },
         {
             "name":"mycroft-stop",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221613.045024,
+            "installed":1666220685.012354,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-stop|21.02"
-        },
-        {
-            "name":"mycroft-reminder",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221613.2548423,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"mycroft-reminder|21.02"
-        },
-        {
-            "name":"fallback-query",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221614.033083,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"fallback-query|21.02"
         },
         {
             "name":"mycroft-version-checker",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221615.2458303,
+            "installed":1666220685.1736193,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-version-checker|21.02"
         },
         {
-            "name":"mycroft-singing",
+            "name":"fallback-query",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221615.3624387,
+            "installed":1666220685.1807864,
             "updated":0,
             "installation":"installed",
-            "skill_gid":"mycroft-singing|21.02"
+            "skill_gid":"fallback-query|21.02"
         },
         {
             "name":"mycroft-timer",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221615.8763115,
+            "installed":1666220685.199144,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-timer|21.02"
@@ -157,27 +151,57 @@
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221619.2979407,
+            "installed":1666220685.4763787,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-fallback-duck-duck-go|21.02"
         },
         {
-            "name":"mycroft-joke",
+            "name":"mycroft-singing",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221620.5557642,
+            "installed":1666220686.763368,
             "updated":0,
             "installation":"installed",
-            "skill_gid":"mycroft-joke|21.02"
+            "skill_gid":"mycroft-singing|21.02"
+        },
+        {
+            "name":"fallback-wolfram-alpha",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220688.0006855,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"fallback-wolfram-alpha|21.02"
+        },
+        {
+            "name":"mycroft-installer",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220688.9623072,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"mycroft-installer|21.02"
+        },
+        {
+            "name":"mycroft-configuration",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220691.2189023,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"mycroft-configuration|21.02"
         },
         {
             "name":"mycroft-ip",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221621.783531,
+            "installed":1666220692.0675075,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-ip|21.02"
@@ -187,97 +211,77 @@
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221622.5738113,
+            "installed":1666220692.726681,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-audio-record|21.02"
         },
         {
-            "name":"fallback-wolfram-alpha",
+            "name":"mycroft-joke",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221625.770457,
+            "installed":1666220693.6474748,
             "updated":0,
             "installation":"installed",
-            "skill_gid":"fallback-wolfram-alpha|21.02"
+            "skill_gid":"mycroft-joke|21.02"
         },
         {
             "name":"mycroft-npr-news",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221630.1306171,
+            "installed":1666220696.3273509,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-npr-news|21.02"
-        },
-        {
-            "name":"mycroft-support-helper",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221632.9226873,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"mycroft-support-helper|21.02"
-        },
-        {
-            "name":"mycroft-configuration",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221636.2868934,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"mycroft-configuration|21.02"
         },
         {
             "name":"mycroft-date-time",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221655.6874437,
+            "installed":1666220711.2293692,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-date-time|21.02"
-        },
-        {
-            "name":"mycroft-wiki",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221658.3161674,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"mycroft-wiki|21.02"
-        },
-        {
-            "name":"mycroft-installer",
-            "origin":"default",
-            "beta":false,
-            "status":"active",
-            "installed":1666221659.5124526,
-            "updated":0,
-            "installation":"installed",
-            "skill_gid":"mycroft-installer|21.02"
         },
         {
             "name":"mycroft-alarm",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221660.369341,
+            "installed":1666220712.6838357,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-alarm|21.02"
+        },
+        {
+            "name":"mycroft-support-helper",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220714.6997817,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"mycroft-support-helper|21.02"
+        },
+        {
+            "name":"mycroft-wiki",
+            "origin":"default",
+            "beta":false,
+            "status":"active",
+            "installed":1666220716.4295235,
+            "updated":0,
+            "installation":"installed",
+            "skill_gid":"mycroft-wiki|21.02"
         },
         {
             "name":"mycroft-weather",
             "origin":"default",
             "beta":false,
             "status":"active",
-            "installed":1666221662.3132648,
+            "installed":1666220718.3504353,
             "updated":0,
             "installation":"installed",
             "skill_gid":"mycroft-weather|21.02"

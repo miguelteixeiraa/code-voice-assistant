@@ -4,10 +4,11 @@
     "description": "Coding together with a voice assistant!",
     "publisher": "code-insiders",
     "scripts": {
+        "mycroft": "./src/domain/mycroft/mycroft",
         "vscode:prepublish": "npm run compile",
         "clean": "rm -r out",
         "compile": "pnpm clean && tsc -p ./tsconfig.json",
-        "start": "node out/src/extension.js",
+        "start": "pnpm mycroft && node out/extension.js",
         "watch": "tsc -watch -p ./",
         "test": "pnpm jest"
     },

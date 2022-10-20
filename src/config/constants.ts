@@ -1,1 +1,1 @@
-export const EXTENSION_PREFIX = 'voice_assistant'
+export const EXTENSION_PREFIX = 'extension'
